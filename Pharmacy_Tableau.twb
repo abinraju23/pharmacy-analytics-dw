@@ -1,0 +1,2538 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Tableau_CareUnit_RouteCategory' inline='true' name='federated.0lkrco81di7t2t1bwneyt050khkj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_CareUnit_RouteCategory' name='textscan.053vswh0j3ttfh16juy4h1gsqi68'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_CareUnit_RouteCategory.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.053vswh0j3ttfh16juy4h1gsqi68' name='Tableau_CareUnit_RouteCategory.csv' table='[Tableau_CareUnit_RouteCategory#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='first_careunit' ordinal='0' />
+            <column datatype='string' name='route_category' ordinal='1' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first_careunit]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>first_careunit</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Tableau_CareUnit_RouteCategory.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]' role='measure' type='quantitative' />
+      <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:route_category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Intravenous&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oral&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Inhaled&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Subcutaneous&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_CareUnit_RouteCategory.csv' id='Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442'>
+            <properties context=''>
+              <relation connection='textscan.053vswh0j3ttfh16juy4h1gsqi68' name='Tableau_CareUnit_RouteCategory.csv' table='[Tableau_CareUnit_RouteCategory#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='first_careunit' ordinal='0' />
+                  <column datatype='string' name='route_category' ordinal='1' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Patient_Summary' inline='true' name='federated.0n8yj7a0oc3bx11318gsh0iyjj3q' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Patient_Summary' name='textscan.0yomxf91jnucbn1agy1931hg2add'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Patient_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0yomxf91jnucbn1agy1931hg2add' name='Tableau_Patient_Summary.csv' table='[Tableau_Patient_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='subject_id' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+            <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+            <column datatype='real' name='AvgDuration' ordinal='4' />
+            <column datatype='integer' name='IVPrescriptions' ordinal='5' />
+            <column datatype='real' name='TotalICU_LOS' ordinal='6' />
+            <column datatype='string' name='PrimaryDiagnosis' ordinal='7' />
+            <column datatype='string' name='CareUnit' ordinal='8' />
+            <column datatype='string' name='RiskLevel' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subject_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[subject_id]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>subject_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DistinctDrugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DistinctDrugs]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>DistinctDrugs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IVPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IVPrescriptions]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>IVPrescriptions</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalICU_LOS</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalICU_LOS]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>TotalICU_LOS</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PrimaryDiagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PrimaryDiagnosis]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>PrimaryDiagnosis</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CareUnit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CareUnit]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>CareUnit</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RiskLevel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RiskLevel]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>RiskLevel</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Care Unit' datatype='string' name='[CareUnit]' role='dimension' type='nominal' />
+      <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+      <column caption='IV Prescriptions' datatype='integer' name='[IVPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[PrimaryDiagnosis]' role='dimension' type='nominal' />
+      <column caption='Risk Level' datatype='string' name='[RiskLevel]' role='dimension' type='nominal' />
+      <column caption='TotalICU LOS' datatype='real' name='[TotalICU_LOS]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Tableau_Patient_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Subject Id' datatype='integer' name='[subject_id]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Patient_Summary.csv' id='Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9'>
+            <properties context=''>
+              <relation connection='textscan.0yomxf91jnucbn1agy1931hg2add' name='Tableau_Patient_Summary.csv' table='[Tableau_Patient_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='subject_id' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+                  <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+                  <column datatype='real' name='AvgDuration' ordinal='4' />
+                  <column datatype='integer' name='IVPrescriptions' ordinal='5' />
+                  <column datatype='real' name='TotalICU_LOS' ordinal='6' />
+                  <column datatype='string' name='PrimaryDiagnosis' ordinal='7' />
+                  <column datatype='string' name='CareUnit' ordinal='8' />
+                  <column datatype='string' name='RiskLevel' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Diagnosis_Summary' inline='true' name='federated.1utj0tk03mq1331ag661k0zwbwhm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Diagnosis_Summary' name='textscan.0t1ho4d18eeflm117fue410tl10n'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Diagnosis_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0t1ho4d18eeflm117fue410tl10n' name='Tableau_Diagnosis_Summary.csv' table='[Tableau_Diagnosis_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='primary_diagnosis' ordinal='0' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='1' />
+            <column datatype='integer' name='UniquePatients' ordinal='2' />
+            <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+            <column datatype='real' name='AvgDuration' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>primary_diagnosis</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UniquePatients</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[UniquePatients]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>UniquePatients</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DistinctDrugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DistinctDrugs]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>DistinctDrugs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Unique Patients' datatype='integer' name='[UniquePatients]' role='measure' type='quantitative' />
+      <column caption='Tableau_Diagnosis_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Diagnosis_Summary.csv' id='Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3'>
+            <properties context=''>
+              <relation connection='textscan.0t1ho4d18eeflm117fue410tl10n' name='Tableau_Diagnosis_Summary.csv' table='[Tableau_Diagnosis_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='primary_diagnosis' ordinal='0' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='1' />
+                  <column datatype='integer' name='UniquePatients' ordinal='2' />
+                  <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+                  <column datatype='real' name='AvgDuration' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Drug_Summary' inline='true' name='federated.0xqt4p30j216bg15zlnax025tt56' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Drug_Summary' name='textscan.0ej29ck013oy4g18fpw5z1hebrb0'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Drug_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ej29ck013oy4g18fpw5z1hebrb0' name='Tableau_Drug_Summary.csv' table='[Tableau_Drug_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='drug' ordinal='0' />
+            <column datatype='string' name='drug_type' ordinal='1' />
+            <column datatype='string' name='route_category' ordinal='2' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='3' />
+            <column datatype='integer' name='UniquePatients' ordinal='4' />
+            <column datatype='real' name='AvgDuration' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>drug</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_type]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>drug_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UniquePatients</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[UniquePatients]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>UniquePatients</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Unique Patients' datatype='integer' name='[UniquePatients]' role='measure' type='quantitative' />
+      <column caption='Tableau_Drug_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]' role='measure' type='quantitative' />
+      <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+      <column caption='Drug Type' datatype='string' name='[drug_type]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:route_category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Inhaled&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Intravenous&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oral&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Subcutaneous&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Drug_Summary.csv' id='Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361'>
+            <properties context=''>
+              <relation connection='textscan.0ej29ck013oy4g18fpw5z1hebrb0' name='Tableau_Drug_Summary.csv' table='[Tableau_Drug_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='drug' ordinal='0' />
+                  <column datatype='string' name='drug_type' ordinal='1' />
+                  <column datatype='string' name='route_category' ordinal='2' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='3' />
+                  <column datatype='integer' name='UniquePatients' ordinal='4' />
+                  <column datatype='real' name='AvgDuration' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Master_Dataset' inline='true' name='federated.0m6q73i1woos3r132x16j1xz7ye3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Master_Dataset' name='textscan.1c7qvx818ckeq213bytw11frb1l6'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Master_Dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1c7qvx818ckeq213bytw11frb1l6' name='Tableau_Master_Dataset.csv' table='[Tableau_Master_Dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='row_id' ordinal='0' />
+            <column datatype='integer' name='subject_id' ordinal='1' />
+            <column datatype='integer' name='hadm_id' ordinal='2' />
+            <column datatype='real' name='icustay_id' ordinal='3' />
+            <column datatype='date' name='startdate' ordinal='4' />
+            <column datatype='date' name='enddate' ordinal='5' />
+            <column datatype='string' name='drug_type' ordinal='6' />
+            <column datatype='string' name='drug' ordinal='7' />
+            <column datatype='string' name='drug_name_poe' ordinal='8' />
+            <column datatype='string' name='drug_name_generic' ordinal='9' />
+            <column datatype='string' name='formulary_drug_cd' ordinal='10' />
+            <column datatype='real' name='gsn' ordinal='11' />
+            <column datatype='real' name='ndc' ordinal='12' />
+            <column datatype='string' name='prod_strength' ordinal='13' />
+            <column datatype='string' name='dose_val_rx' ordinal='14' />
+            <column datatype='string' name='dose_unit_rx' ordinal='15' />
+            <column datatype='string' name='form_val_disp' ordinal='16' />
+            <column datatype='string' name='form_unit_disp' ordinal='17' />
+            <column datatype='string' name='route' ordinal='18' />
+            <column datatype='string' name='gender' ordinal='19' />
+            <column datatype='string' name='first_careunit' ordinal='20' />
+            <column datatype='string' name='last_careunit' ordinal='21' />
+            <column datatype='real' name='los' ordinal='22' />
+            <column datatype='real' name='duration_days' ordinal='23' />
+            <column datatype='integer' name='is_iv' ordinal='24' />
+            <column datatype='integer' name='is_formulary' ordinal='25' />
+            <column datatype='string' name='primary_diagnosis' ordinal='26' />
+            <column datatype='integer' name='distinct_drugs' ordinal='27' />
+            <column datatype='string' name='risk_level' ordinal='28' />
+            <column datatype='string' name='route_category' ordinal='29' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>row_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[row_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>row_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subject_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[subject_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>subject_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hadm_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hadm_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>hadm_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icustay_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[icustay_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>icustay_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[startdate]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>startdate</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enddate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[enddate]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>enddate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_type]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_name_poe</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_name_poe]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_name_poe</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_name_generic</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_name_generic]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_name_generic</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>formulary_drug_cd</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[formulary_drug_cd]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>formulary_drug_cd</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gsn</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gsn]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>gsn</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ndc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ndc]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>ndc</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prod_strength</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[prod_strength]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>prod_strength</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dose_val_rx</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dose_val_rx]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>dose_val_rx</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dose_unit_rx</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dose_unit_rx]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>dose_unit_rx</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>form_val_disp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[form_val_disp]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>form_val_disp</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>form_unit_disp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[form_unit_disp]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>form_unit_disp</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>route</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first_careunit]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>first_careunit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[last_careunit]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>last_careunit</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>los</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[los]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>los</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_days</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[duration_days]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>duration_days</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_iv</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_iv]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>is_iv</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_formulary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_formulary]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>is_formulary</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>primary_diagnosis</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distinct_drugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[distinct_drugs]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>distinct_drugs</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>risk_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[risk_level]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>risk_level</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tableau_Master_Dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]' role='measure' type='quantitative' />
+      <column caption='Distinct Drugs' datatype='integer' name='[distinct_drugs]' role='measure' type='quantitative' />
+      <column caption='Dose Unit Rx' datatype='string' name='[dose_unit_rx]' role='dimension' type='nominal' />
+      <column caption='Dose Val Rx' datatype='string' name='[dose_val_rx]' role='dimension' type='nominal' />
+      <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+      <column caption='Drug Name Generic' datatype='string' name='[drug_name_generic]' role='dimension' type='nominal' />
+      <column caption='Drug Name Poe' datatype='string' name='[drug_name_poe]' role='dimension' type='nominal' />
+      <column caption='Drug Type' datatype='string' name='[drug_type]' role='dimension' type='nominal' />
+      <column caption='Duration Days' datatype='real' name='[duration_days]' role='measure' type='quantitative' />
+      <column caption='Enddate' datatype='date' name='[enddate]' role='dimension' type='ordinal' />
+      <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+      <column caption='Form Unit Disp' datatype='string' name='[form_unit_disp]' role='dimension' type='nominal' />
+      <column caption='Form Val Disp' datatype='string' name='[form_val_disp]' role='dimension' type='nominal' />
+      <column caption='Formulary Drug Cd' datatype='string' name='[formulary_drug_cd]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Gsn' datatype='real' name='[gsn]' role='measure' type='quantitative' />
+      <column caption='Hadm Id' datatype='integer' name='[hadm_id]' role='dimension' type='ordinal' />
+      <column caption='Icustay Id' datatype='real' name='[icustay_id]' role='dimension' type='ordinal' />
+      <column caption='Is Formulary' datatype='integer' name='[is_formulary]' role='measure' type='quantitative' />
+      <column caption='Is Iv' datatype='integer' name='[is_iv]' role='measure' type='quantitative' />
+      <column caption='Last Careunit' datatype='string' name='[last_careunit]' role='dimension' type='nominal' />
+      <column caption='Los' datatype='real' name='[los]' role='measure' type='quantitative' />
+      <column caption='Ndc' datatype='real' name='[ndc]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+      <column caption='Prod Strength' datatype='string' name='[prod_strength]' role='dimension' type='nominal' />
+      <column caption='Risk Level' datatype='string' name='[risk_level]' role='dimension' type='nominal' />
+      <column caption='Route' datatype='string' name='[route]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column caption='Row Id' datatype='integer' name='[row_id]' role='dimension' type='ordinal' />
+      <column caption='Startdate' datatype='date' name='[startdate]' role='dimension' type='ordinal' />
+      <column caption='Subject Id' datatype='integer' name='[subject_id]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Master_Dataset.csv' id='Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85'>
+            <properties context=''>
+              <relation connection='textscan.1c7qvx818ckeq213bytw11frb1l6' name='Tableau_Master_Dataset.csv' table='[Tableau_Master_Dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='row_id' ordinal='0' />
+                  <column datatype='integer' name='subject_id' ordinal='1' />
+                  <column datatype='integer' name='hadm_id' ordinal='2' />
+                  <column datatype='real' name='icustay_id' ordinal='3' />
+                  <column datatype='date' name='startdate' ordinal='4' />
+                  <column datatype='date' name='enddate' ordinal='5' />
+                  <column datatype='string' name='drug_type' ordinal='6' />
+                  <column datatype='string' name='drug' ordinal='7' />
+                  <column datatype='string' name='drug_name_poe' ordinal='8' />
+                  <column datatype='string' name='drug_name_generic' ordinal='9' />
+                  <column datatype='string' name='formulary_drug_cd' ordinal='10' />
+                  <column datatype='real' name='gsn' ordinal='11' />
+                  <column datatype='real' name='ndc' ordinal='12' />
+                  <column datatype='string' name='prod_strength' ordinal='13' />
+                  <column datatype='string' name='dose_val_rx' ordinal='14' />
+                  <column datatype='string' name='dose_unit_rx' ordinal='15' />
+                  <column datatype='string' name='form_val_disp' ordinal='16' />
+                  <column datatype='string' name='form_unit_disp' ordinal='17' />
+                  <column datatype='string' name='route' ordinal='18' />
+                  <column datatype='string' name='gender' ordinal='19' />
+                  <column datatype='string' name='first_careunit' ordinal='20' />
+                  <column datatype='string' name='last_careunit' ordinal='21' />
+                  <column datatype='real' name='los' ordinal='22' />
+                  <column datatype='real' name='duration_days' ordinal='23' />
+                  <column datatype='integer' name='is_iv' ordinal='24' />
+                  <column datatype='integer' name='is_formulary' ordinal='25' />
+                  <column datatype='string' name='primary_diagnosis' ordinal='26' />
+                  <column datatype='integer' name='distinct_drugs' ordinal='27' />
+                  <column datatype='string' name='risk_level' ordinal='28' />
+                  <column datatype='string' name='route_category' ordinal='29' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name=' Medication Route Share '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffbe7d' fontname='Tableau Semibold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Drug_Summary' name='federated.0xqt4p30j216bg15zlnax025tt56' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xqt4p30j216bg15zlnax025tt56'>
+            <column caption='MIN(0)' datatype='integer' name='[Calculation_1286763245101060]' role='measure' type='quantitative' user:unnamed=' Medication Route Share '>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1286763245101060]' derivation='User' name='[usr:Calculation_1286763245101060:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' value='31' />
+            <format attr='display' class='1' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='852' />
+            <format attr='height' value='537' />
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Medium' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9450275897979736' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+              <size column='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' />
+              <text column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='off' />
+                <format attr='vertical-align' value='center' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='0.75762432813644409' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.31784531474113464' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk] + [federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{C36BE705-BCD4-414C-9225-5D96DA9DF9BE}' />
+    </worksheet>
+    <worksheet name='Diagnosis complexity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#86bcb6' fontname='Tableau Regular' fontsize='20'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Diagnosis_Summary' name='federated.1utj0tk03mq1331ag661k0zwbwhm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1utj0tk03mq1331ag661k0zwbwhm'>
+            <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+            <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+            <column-instance column='[primary_diagnosis]' derivation='None' name='[none:primary_diagnosis:nk]' pivot='key' type='nominal' />
+            <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+            <column-instance column='[AvgDuration]' derivation='Sum' name='[sum:AvgDuration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DistinctDrugs]' derivation='Sum' name='[sum:DistinctDrugs:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Medium' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' />
+              <size column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:DistinctDrugs:qk]' />
+              <text column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[none:primary_diagnosis:nk]' />
+              <lod column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[none:primary_diagnosis:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{ABEAE295-E2B6-4F28-8BC5-8D5237666E30}' />
+    </worksheet>
+    <worksheet name='Drug Route Distribution by Care Unit'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Bold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_CareUnit_RouteCategory' name='federated.0lkrco81di7t2t1bwneyt050khkj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lkrco81di7t2t1bwneyt050khkj'>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+            <column-instance column='[first_careunit]' derivation='None' name='[none:first_careunit:nk]' pivot='key' type='nominal' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:first_careunit:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;MICU&quot;</bucket>
+              <bucket>&quot;SICU&quot;</bucket>
+              <bucket>&quot;CCU&quot;</bucket>
+              <bucket>&quot;TSICU&quot;</bucket>
+              <bucket>&quot;CSRU&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0lkrco81di7t2t1bwneyt050khkj].[sum:TotalPrescriptions:qk]</rows>
+        <cols>[federated.0lkrco81di7t2t1bwneyt050khkj].[none:first_careunit:nk]</cols>
+      </table>
+      <simple-id uuid='{538AD62E-3935-4530-A570-601B061A7225}' />
+    </worksheet>
+    <worksheet name='Top 10 Drugs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#59a14f' fontname='Arial Rounded MT Bold' fontsize='18'> Top 10 Drugs </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Drug_Summary' name='federated.0xqt4p30j216bg15zlnax025tt56' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xqt4p30j216bg15zlnax025tt56'>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+            <column-instance column='[drug]' derivation='None' name='[none:drug:nk]' pivot='key' type='nominal' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([TotalPrescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:drug:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='168' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='font-style' scope='rows' value='italic' />
+            <format attr='color' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='#000000' />
+            <format attr='font-family' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='Tableau Medium' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+              <text column='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.3073480129241943' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]</rows>
+        <cols>[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]</cols>
+      </table>
+      <simple-id uuid='{D8CD9F7A-FD16-4D98-A429-53C92B66F96D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='968' maxwidth='1866' minheight='968' minwidth='1866' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='84608' id='7' param='horz' type-v2='layout-flow' w='99142' x='429' y='14566'>
+            <zone h='84608' id='5' type-v2='layout-basic' w='99142' x='429' y='14566'>
+              <zone h='39979' id='3' name='Drug Route Distribution by Care Unit' w='51698' x='429' y='14566'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='39979' id='9' name='Top 10 Drugs' w='47444' x='52127' y='14566'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='44629' id='11' name='Diagnosis complexity' w='51714' x='429' y='54545'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='44629' id='13' name=' Medication Route Share ' w='47428' x='52143' y='54545'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='13740' id='14' type-v2='empty' w='27641' x='71930' y='826'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='13740' id='15' param='horz' type-v2='layout-flow' w='46746' x='429' y='826'>
+            <zone forceUpdate='true' h='13740' id='16' type-v2='text' w='46746' x='429' y='826'>
+              <formatted-text>
+                <run bold='true' fontcolor='#e15759' fontname='Arial Black' fontsize='22'>BIDMC ICU pharmacy analytics</run>
+                <run>Æ&#10;</run>
+                <run fontname='Arial Narrow' fontsize='16'>MIMIC-III Clinical Database Demo v1.4 · 100 patients · 10,398 prescriptions</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#4e79a7' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='13740' id='17' type-v2='text' w='12378' x='47175' y='826'>
+            <formatted-text>
+              <run fontalignment='1' fontname='Arial Black' fontsize='18'>IV rate</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#f17b79' fontname='Arial' fontsize='19'>59.5%</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='13740' id='18' type-v2='text' w='12377' x='59553' y='826'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#1b1b1b' fontname='Bahnschrift' fontsize='11'>High Risk Patients</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#e15759' fontname='Arial Black' fontsize='19'>79 / 94</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='14256' id='8' name='Drug Route Distribution by Care Unit' pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type-v2='color' w='8414' x='86227' y='620' />
+        <zone h='9091' id='12' name='Diagnosis complexity' pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type-v2='color' w='8403' x='73770' y='2169' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98348' id='19' param='vert' type-v2='layout-flow' w='99142' x='429' y='826'>
+                <zone forceUpdate='true' h='13740' id='16' type-v2='text' w='46746' x='429' y='826'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#e15759' fontname='Arial Black' fontsize='22'>BIDMC ICU pharmacy analytics</run>
+                    <run>Æ&#10;</run>
+                    <run fontname='Arial Narrow' fontsize='16'>MIMIC-III Clinical Database Demo v1.4 · 100 patients · 10,398 prescriptions</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13740' id='17' type-v2='text' w='12378' x='47175' y='826'>
+                  <formatted-text>
+                    <run fontalignment='1' fontname='Arial Black' fontsize='18'>IV rate</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#f17b79' fontname='Arial' fontsize='19'>59.5%</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='13740' id='18' type-v2='text' w='12377' x='59553' y='826'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#1b1b1b' fontname='Bahnschrift' fontsize='11'>High Risk Patients</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#e15759' fontname='Arial Black' fontsize='19'>79 / 94</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39979' id='3' is-fixed='true' name='Drug Route Distribution by Care Unit' w='51698' x='429' y='14566'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14256' id='8' name='Drug Route Distribution by Care Unit' pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type-v2='color' w='8414' x='86227' y='620'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39979' id='9' is-fixed='true' name='Top 10 Drugs' w='47444' x='52127' y='14566'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44629' id='11' is-fixed='true' name='Diagnosis complexity' w='51714' x='429' y='54545'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9091' id='12' name='Diagnosis complexity' pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type-v2='color' w='8403' x='73770' y='2169'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44629' id='13' is-fixed='true' name=' Medication Route Share ' w='47428' x='52143' y='54545'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{72B2D7EC-59A2-4750-A9AD-994D4A4ABE06}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' show-side-pane='false' source-height='141'>
+    <window class='worksheet' name='Drug Route Distribution by Care Unit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0lkrco81di7t2t1bwneyt050khkj].[none:first_careunit:nk]</field>
+            <field>[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]</field>
+            <field>[federated.1vmn5ig1b75azh11rqvx800ejgmk].[none:first_careunit:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{8A0812FF-53DF-4D02-BF17-352DEE58C62B}' />
+    </window>
+    <window class='worksheet' name='Top 10 Drugs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.0n8yj7a0oc3bx11318gsh0iyjj3q].[none:PrimaryDiagnosis:nk]</field>
+            <field>[federated.0n8yj7a0oc3bx11318gsh0iyjj3q].[none:RiskLevel:nk]</field>
+            <field>[federated.0n8yj7a0oc3bx11318gsh0iyjj3q].[none:subject_id:ok]</field>
+            <field>[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{A6AA05EF-E2E0-4C57-A313-3F67E6FB840C}' />
+    </window>
+    <window class='worksheet' name='Diagnosis complexity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+        <highlight>
+          <color-one-way>
+            <field>[federated.1utj0tk03mq1331ag661k0zwbwhm].[none:primary_diagnosis:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{6BF27F8B-7261-4691-AFA3-381C7F63F9A5}' />
+    </window>
+    <window class='worksheet' name=' Medication Route Share '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='50'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' type='color' />
+            <card pane-specification-id='1' param='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.0xqt4p30j216bg15zlnax025tt56].[:Measure Names]</field>
+            <field>[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{04C63D0E-F43E-4227-BF49-3FF8C3D89076}' />
+    </window>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Medication Route Share ' />
+        <viewpoint name='Diagnosis complexity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Drug Route Distribution by Care Unit'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Top 10 Drugs'>
+          <zoom type='entire-view' />
+          <highlight field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]'>
+            <bucket-selection />
+          </highlight>
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{9D897DB5-2B8C-4A0C-A73C-F197C6C9FC8C}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='192' name=' Medication Route Share ' width='192'>
+      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
+      WhTnGyHpDUMAAAAASUVORK5CYII=
+    </thumbnail>
+    <thumbnail height='192' name='Dashboard 1' width='192'>
+      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
+      rkJggg==
+    </thumbnail>
+    <thumbnail height='192' name='Diagnosis complexity' width='192'>
+      iVBORw0KGgoAAAANSUhEUgAAAMAAAADACAYAAABS3GwHAAAACXBIWXMAABJ0AAASdAHeZh94
+      AAANAklEQVR4nO3Z6W8bZ2LH8e8cpCgeOkhJpm3Jto44ko84cQ7vGk2QLbppUhRYFGj/un3V
+      FwVaBMgudrubzX1s0Kzr2E7iQ5Z1n5QoyRR1ULxmnr5Q7FixctROzMjP7/NGGHI483DIr2bm
+      oWOMMYhYym30AEQaSQGI1fx7F26uLbFZqzRqLPIQEn4ThUq50cPYd3YFsFGtsFbdbtRY5CGE
+      BlbLpUYPY9/RJZBYbY8ADFfef4cP/vIxGIMJw7vPBJsrTE6vMDM28fXaxvDNiaRibpbiZvXu
+      8trsMH/96Ao3Ll4mP3aDt1//PdevjnLhzT/xPx9e+PHfleX+9sZ/MJe//2wwcWMEYNdnCl99
+      huH9k4GrMxOUqrsfmx4eJthjn4vXr3DlyuhXGwyYG5/i8ief3LeeMSE/p3lHf68Hy1tb+M1x
+      Pv3jH5ibzZPp6cGtFwnqLjOFCEcOR1iZvEU93kVx8jqFaoSuVIT5+UVakh7Z/ieIZwP+/OfX
+      6X/xNxxJFpgbX2AjEWEpAr/+19/w7hu/IxrWiSWzj/o9P97CCjUvycTFi4xuLnLk6TPMj80D
+      FeZv3sRU1rjy2S0ODgxy6gj88b0pDrRDcWWbTNrDTfdiiotsFdY40NOFGR5noejQn4VPL9zi
+      QCKkjMfnb79JpitLtrebaNcgy59/RuSJl3jn339LPdlDKuJQd6p8/Ie/0AyUvCpuNEVxdhI/
+      leXVf/unRh8pYK8zgIFEazu5m7cobqxRDQLqtTohDp3Hemn2IQwCwiDEcR3WV1cI8WhKtjNw
+      YohTzw5RrdZZHrtOLNtHfXsDgDPnn+X6pat0ZhJ89Ke38OMZEpkOpm/e2PM/ijyYpauXKLkt
+      FFaXds7Mjkt+coTllSKHjvSACVhZWKSpOYYxIWdfeYVw4zZhAIeHBhn78guCWh3HcyEMMAbO
+      vfr3zIxOkU6nONx7BGMcjp55nl/9y6v87b3PGOjLkM5mOdzdQnHLJ0qdMNg5y2yvLTM5OoPT
+      lOLcy7+ksLiEG4k2+Ch9zbn3h7CL+RnWqtuYMMQAjuMQhiG3rnxB39mnaXJdwiDA9TwwhjDc
+      icAYcN3dLZmvLp9cz/vGLg1BPcDzfcIwBBxc1/np3+ljrjXazFJpa9djdy83jMH1vF3Ljufh
+      3F1v5xLIccGEMHzpC4aeO7PrMw3DAMfxgJ11Xc9lM7/A1Nwap86e+Hq9O9+Pu68LcRwHx9nZ
+      28536+fzme8ZgOw/ewUg30+zQGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMA
+      YjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBW
+      UwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUF
+      IFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBi
+      NQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVvMbPQD5cdTqkF9r9Cj2HwXwmCjXAyaLG40exr6j
+      SyCxms4AjxlTL3PtnbfJHH+aoFyg2XMIfZ/ZkWkGzr9IdXGUkteGW1snYmoszy2Sfep58l9e
+      INFznGMnBxv9Fh4pBfCYKd76jLbTL3Oou4WPfvs6bj1K99lThH4cPxJhbXmT2+Ft/LAKIZx6
+      5VWuvvMWQalEyo80eviPnC6BHjOJ7n5yFz9gcXKWTP8Jjnz1H73nmXMkkk0AHDvRy8yteaJO
+      nZGP3yPeeYh4R5alkeFGDr0hHGOMubNwMT/DWnW7keORB+SGUT6YXAbAhCE4Do7jfOdrjDGY
+      MMT1PMIgwHE9vuclj51dl0DvvXmTkZl8o8YiD+Gpp45BWxQAx/1hJ3bHcXA8DwD3q7+22RXA
+      zeklLt2cbdRY5CFksm3E2roaPYx9R/cAYrU9A9iYu8ba1BVq1ToAW0vTAJQLOQBMvUR5/cf5
+      2bFcyBHu9YSps7k4xmZufGfRGMxe64k8hD2nQWtbRYwJqKzeorBeJRI11KY3qK3nwIvhmSLF
+      2SUqCZ/q5jpezCOS7GS7WKLj+NNszA4DASaoUSttEkmmCGnGcyuYWpmmA2cINyYpbwewvUoA
+      bM0NE43HCUPwmtupbxdxXB/PixDWNihMDuNG4wSlJaKpTurVKm60nbae/kd7xOSxsucZwJgA
+      13MJKmVaek7isDNbEE21g+PgJ9J4roPjx2huO0i88zBhGJLsPonrONRLq1S31nEjCZpb0kRb
+      slQL84RhADg7Mw2OiwnqRFNpMNCUPkpTPEW86yimVgHHu3dA7LwoJNp6iObW9M7D4Z7nDpEf
+      bM8zQGbwpV3Lsd6zwM5lCOzMHmSGnsNxvu4n1vb1+unBF8FxuTOjZoyhuf0gpdVp4pmjO69L
+      DJHI3tmmwUnfs63WgxgT7tp+uv/Zu1N7YWUDP1og0tLxMO9d5P/3S/C988r3fjnvX8/9xrID
+      OCQ6er9lm/dPPt+3jXum9tymFC09p3/gqEW+nWaBxGoKQKymAMRqCkCspgDEagpArKYAxGoK
+      QKymAMRqCkCspgDEagpArKYAxGoKQKymAMRqCkCspgDEagpArKYAxGoKQKymAMRqCkCspgDE
+      agpArKYAxGoKQKymAMRqCkCspgDEagpArKYAxGoKQKymAMRqCkCspgDEagpArKYAxGoKQKym
+      AMRqCkCspgDEagpArKYAxGoKQKymAMRqCkCspgDEagpArKYAxGoKQKymAMRqfqMHID+OmO/R
+      25pq9DD2HQXwmPBcSCXCRg9j39ElkFhNAVggDL/9zGCM+e7nw4B6rf7jDOR79tUIugR6zKxP
+      XeeTT0c5+ctnSbe2AXWuvf8u3c+ep6O1ifxqiUxHivzsAkdPPMnkxQ/Jb6XpORihtWeAZLTC
+      2MgqLckAmlq5+Lv/ZOClV3DrdfpODlBYXiUWj7O6fJvJy5d55tXXaG9PUV6eZWHdIVLbItF5
+      gPzEOAtj45z6xdNsBgnYWqazt5erH1/g/D+/0ujDdNeuAF7+xXF6+zobNRZ5CEP9BwGIHzhM
+      s3eDreIS819MAUWME2X08gWura2wsRaQHTxMxgt49/oUTz53lPL4VeaiJ5kYfZ+/e+0FVqcX
+      mAtWwDg0dxwm3Qwjlz5n/fZtZhdLtDdXeOEf/4Hxyy6JeAwAU9kkN5aDsInarUkiYUiIS1Ok
+      zvRMDrOZY2o8RyzqNe4g7WFXAL0nDpDq00zCftQRi7O0vUV5fZN4WytBzaO0Pk8s00nM36Ju
+      Uhw5nqYaxIimInTFDEELzI/NkOkdYG1xmtZD3ThuhJZMK+2JFNXSNoQu2xsbxNOdJFpbear3
+      BPWlm0zdmiadSbI0Ncp2mORoR5yWdDvJZIaNYh43CIhtOqxvBTR7ASt1n3RnBt93Gn2odnGM
+      MebOwkdzU6yUS40cjzygOwE8auX1dfxkC/4+vZvcc9jrK3lurxQeeKO1rSKbm5UHfn0hn//W
+      5zYLBYIgpLRVolRYYX4mB8aQmxijVKo+8D7lwcRa9u+XH77lJvjCW+8Sc2vE+56hXlig75mz
+      TH7+JcdOPknop6htrLIyO0G5EhJNZehs88kXKhzKtjAzPsPR4/1UwgjDk6P0nH6ObLaNsF7h
+      8vsf0jVwks3cJJGWdm4v5Og+MUR+ZISOgUGWJ4aJtGaJOgGrc1OYWJp6cYFCYRs30swLv36J
+      i7//LzpOnuN2fpny+joH0lEWx5KsFA3PNLcRj3c86mMo+9ieAYT1GpFsN7XiCn0D7Xz0xn/T
+      fqSbqUsXcA+fpTQ3QlNbEj9aJdwqMrNWId0E10dKnOpPMT02Tegn8F2P8Zs3yGbPU5y6TtOR
+      U8x8+b+UalE6ihv0neln9NoEEc9h7PNrJDrSbOYmIfBoa41SL/tUyxWinosfBlSB1KF+SrkJ
+      6mGMWGsH3X1JcuUODvujjF0fp+ugApAfbs8ABs+d5+jgE+QmJkm0RTj32kFyo2N0nzjL5I0x
+      unr7SLY244QBhA7VUoGVtSon+w+QTPl0R2vUqjXyC1UyKYcvPhvm9Jkhxj/4K92nzuK7Lslo
+      jU/ffIv08ecxlQ16nuijORWn3tUCoUNta42qG6PrYB9uAC4ePnCov4+WlM90rkqktsLYTImh
+      0z43Fgzdg0ce8eGT/e4nvwk2oQHX4Zv3/pWNAtOTOfpPD+E5P6+Zgf2oUTfB+91P/kOY4+79
+      5W5KtXP8qfafevci32kf37+LPDwFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBi
+      NQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYjUFIFZT
+      AGI1BSBWUwBiNQUgVlMAYjUFIFZTAGI1BSBWUwBiNQUgVlMAYrX/AyVUqfD23xCSAAAAAElF
+      TkSuQmCC
+    </thumbnail>
+    <thumbnail height='192' name='Drug Route Distribution by Care Unit' width='192'>
+      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
+    </thumbnail>
+    <thumbnail height='192' name='Top 10 Drugs' width='192'>
+      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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>

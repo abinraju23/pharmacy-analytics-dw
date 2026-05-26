@@ -1,0 +1,1898 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20261.26.0226.1626                               -->
+<workbook original-version='18.1' source-build='2026.1.0 (20261.26.0226.1626)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <WindowsPersistSimpleIdentifiers />
+    <WorksheetBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Tableau_CareUnit_RouteCategory' inline='true' name='federated.0lkrco81di7t2t1bwneyt050khkj' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_CareUnit_RouteCategory' name='textscan.053vswh0j3ttfh16juy4h1gsqi68'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_CareUnit_RouteCategory.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.053vswh0j3ttfh16juy4h1gsqi68' name='Tableau_CareUnit_RouteCategory.csv' table='[Tableau_CareUnit_RouteCategory#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='first_careunit' ordinal='0' />
+            <column datatype='string' name='route_category' ordinal='1' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first_careunit]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>first_careunit</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_CareUnit_RouteCategory.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Tableau_CareUnit_RouteCategory.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442]' role='measure' type='quantitative' />
+      <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:route_category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>%null%</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Intravenous&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oral&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Inhaled&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Subcutaneous&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_CareUnit_RouteCategory.csv' id='Tableau_CareUnit_RouteCategory.csv_87A3792A60954A01933E2E4CDF462442'>
+            <properties context=''>
+              <relation connection='textscan.053vswh0j3ttfh16juy4h1gsqi68' name='Tableau_CareUnit_RouteCategory.csv' table='[Tableau_CareUnit_RouteCategory#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='first_careunit' ordinal='0' />
+                  <column datatype='string' name='route_category' ordinal='1' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Patient_Summary' inline='true' name='federated.0n8yj7a0oc3bx11318gsh0iyjj3q' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Patient_Summary' name='textscan.0yomxf91jnucbn1agy1931hg2add'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Patient_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0yomxf91jnucbn1agy1931hg2add' name='Tableau_Patient_Summary.csv' table='[Tableau_Patient_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='subject_id' ordinal='0' />
+            <column datatype='string' name='gender' ordinal='1' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+            <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+            <column datatype='real' name='AvgDuration' ordinal='4' />
+            <column datatype='integer' name='IVPrescriptions' ordinal='5' />
+            <column datatype='real' name='TotalICU_LOS' ordinal='6' />
+            <column datatype='string' name='PrimaryDiagnosis' ordinal='7' />
+            <column datatype='string' name='CareUnit' ordinal='8' />
+            <column datatype='string' name='RiskLevel' ordinal='9' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subject_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[subject_id]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>subject_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DistinctDrugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DistinctDrugs]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>DistinctDrugs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>IVPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[IVPrescriptions]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>IVPrescriptions</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalICU_LOS</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[TotalICU_LOS]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>TotalICU_LOS</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>PrimaryDiagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[PrimaryDiagnosis]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>PrimaryDiagnosis</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>CareUnit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[CareUnit]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>CareUnit</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>RiskLevel</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[RiskLevel]</local-name>
+            <parent-name>[Tableau_Patient_Summary.csv]</parent-name>
+            <remote-alias>RiskLevel</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Care Unit' datatype='string' name='[CareUnit]' role='dimension' type='nominal' />
+      <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+      <column caption='IV Prescriptions' datatype='integer' name='[IVPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[PrimaryDiagnosis]' role='dimension' type='nominal' />
+      <column caption='Risk Level' datatype='string' name='[RiskLevel]' role='dimension' type='nominal' />
+      <column caption='TotalICU LOS' datatype='real' name='[TotalICU_LOS]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Tableau_Patient_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9]' role='measure' type='quantitative' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Subject Id' datatype='integer' name='[subject_id]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Patient_Summary.csv' id='Tableau_Patient_Summary.csv_F75E0091A74C4C66B6892DD084183AC9'>
+            <properties context=''>
+              <relation connection='textscan.0yomxf91jnucbn1agy1931hg2add' name='Tableau_Patient_Summary.csv' table='[Tableau_Patient_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='subject_id' ordinal='0' />
+                  <column datatype='string' name='gender' ordinal='1' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='2' />
+                  <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+                  <column datatype='real' name='AvgDuration' ordinal='4' />
+                  <column datatype='integer' name='IVPrescriptions' ordinal='5' />
+                  <column datatype='real' name='TotalICU_LOS' ordinal='6' />
+                  <column datatype='string' name='PrimaryDiagnosis' ordinal='7' />
+                  <column datatype='string' name='CareUnit' ordinal='8' />
+                  <column datatype='string' name='RiskLevel' ordinal='9' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Diagnosis_Summary' inline='true' name='federated.1utj0tk03mq1331ag661k0zwbwhm' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Diagnosis_Summary' name='textscan.0t1ho4d18eeflm117fue410tl10n'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Diagnosis_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0t1ho4d18eeflm117fue410tl10n' name='Tableau_Diagnosis_Summary.csv' table='[Tableau_Diagnosis_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='primary_diagnosis' ordinal='0' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='1' />
+            <column datatype='integer' name='UniquePatients' ordinal='2' />
+            <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+            <column datatype='real' name='AvgDuration' ordinal='4' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>primary_diagnosis</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UniquePatients</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[UniquePatients]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>UniquePatients</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>DistinctDrugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[DistinctDrugs]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>DistinctDrugs</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Diagnosis_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Unique Patients' datatype='integer' name='[UniquePatients]' role='measure' type='quantitative' />
+      <column caption='Tableau_Diagnosis_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Diagnosis_Summary.csv' id='Tableau_Diagnosis_Summary.csv_8126C7A243794879902B16A315B3CEA3'>
+            <properties context=''>
+              <relation connection='textscan.0t1ho4d18eeflm117fue410tl10n' name='Tableau_Diagnosis_Summary.csv' table='[Tableau_Diagnosis_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='primary_diagnosis' ordinal='0' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='1' />
+                  <column datatype='integer' name='UniquePatients' ordinal='2' />
+                  <column datatype='integer' name='DistinctDrugs' ordinal='3' />
+                  <column datatype='real' name='AvgDuration' ordinal='4' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Drug_Summary' inline='true' name='federated.0xqt4p30j216bg15zlnax025tt56' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Drug_Summary' name='textscan.0ej29ck013oy4g18fpw5z1hebrb0'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Drug_Summary.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ej29ck013oy4g18fpw5z1hebrb0' name='Tableau_Drug_Summary.csv' table='[Tableau_Drug_Summary#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='string' name='drug' ordinal='0' />
+            <column datatype='string' name='drug_type' ordinal='1' />
+            <column datatype='string' name='route_category' ordinal='2' />
+            <column datatype='integer' name='TotalPrescriptions' ordinal='3' />
+            <column datatype='integer' name='UniquePatients' ordinal='4' />
+            <column datatype='real' name='AvgDuration' ordinal='5' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>drug</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_type]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>drug_type</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>TotalPrescriptions</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[TotalPrescriptions]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>TotalPrescriptions</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>UniquePatients</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[UniquePatients]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>UniquePatients</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>AvgDuration</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[AvgDuration]</local-name>
+            <parent-name>[Tableau_Drug_Summary.csv]</parent-name>
+            <remote-alias>AvgDuration</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+      <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+      <column caption='Unique Patients' datatype='integer' name='[UniquePatients]' role='measure' type='quantitative' />
+      <column caption='Tableau_Drug_Summary.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361]' role='measure' type='quantitative' />
+      <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+      <column caption='Drug Type' datatype='string' name='[drug_type]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:route_category:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Inhaled&quot;</bucket>
+            </map>
+            <map to='#4e79a7'>
+              <bucket>&quot;Intravenous&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Oral&quot;</bucket>
+            </map>
+            <map to='#bab0ac'>
+              <bucket>&quot;Other&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Subcutaneous&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Drug_Summary.csv' id='Tableau_Drug_Summary.csv_2EEAAB97C2954882ADF97078D18B8361'>
+            <properties context=''>
+              <relation connection='textscan.0ej29ck013oy4g18fpw5z1hebrb0' name='Tableau_Drug_Summary.csv' table='[Tableau_Drug_Summary#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='string' name='drug' ordinal='0' />
+                  <column datatype='string' name='drug_type' ordinal='1' />
+                  <column datatype='string' name='route_category' ordinal='2' />
+                  <column datatype='integer' name='TotalPrescriptions' ordinal='3' />
+                  <column datatype='integer' name='UniquePatients' ordinal='4' />
+                  <column datatype='real' name='AvgDuration' ordinal='5' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+    <datasource caption='Tableau_Master_Dataset' inline='true' name='federated.0m6q73i1woos3r132x16j1xz7ye3' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Tableau_Master_Dataset' name='textscan.1c7qvx818ckeq213bytw11frb1l6'>
+            <connection class='textscan' directory='C:/Users/abinr/Downloads/files' filename='Tableau_Master_Dataset.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1c7qvx818ckeq213bytw11frb1l6' name='Tableau_Master_Dataset.csv' table='[Tableau_Master_Dataset#csv]' type='table'>
+          <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='row_id' ordinal='0' />
+            <column datatype='integer' name='subject_id' ordinal='1' />
+            <column datatype='integer' name='hadm_id' ordinal='2' />
+            <column datatype='real' name='icustay_id' ordinal='3' />
+            <column datatype='date' name='startdate' ordinal='4' />
+            <column datatype='date' name='enddate' ordinal='5' />
+            <column datatype='string' name='drug_type' ordinal='6' />
+            <column datatype='string' name='drug' ordinal='7' />
+            <column datatype='string' name='drug_name_poe' ordinal='8' />
+            <column datatype='string' name='drug_name_generic' ordinal='9' />
+            <column datatype='string' name='formulary_drug_cd' ordinal='10' />
+            <column datatype='real' name='gsn' ordinal='11' />
+            <column datatype='real' name='ndc' ordinal='12' />
+            <column datatype='string' name='prod_strength' ordinal='13' />
+            <column datatype='string' name='dose_val_rx' ordinal='14' />
+            <column datatype='string' name='dose_unit_rx' ordinal='15' />
+            <column datatype='string' name='form_val_disp' ordinal='16' />
+            <column datatype='string' name='form_unit_disp' ordinal='17' />
+            <column datatype='string' name='route' ordinal='18' />
+            <column datatype='string' name='gender' ordinal='19' />
+            <column datatype='string' name='first_careunit' ordinal='20' />
+            <column datatype='string' name='last_careunit' ordinal='21' />
+            <column datatype='real' name='los' ordinal='22' />
+            <column datatype='real' name='duration_days' ordinal='23' />
+            <column datatype='integer' name='is_iv' ordinal='24' />
+            <column datatype='integer' name='is_formulary' ordinal='25' />
+            <column datatype='string' name='primary_diagnosis' ordinal='26' />
+            <column datatype='integer' name='distinct_drugs' ordinal='27' />
+            <column datatype='string' name='risk_level' ordinal='28' />
+            <column datatype='string' name='route_category' ordinal='29' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;en_GB&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;₹&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;en_IN&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>row_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[row_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>row_id</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>subject_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[subject_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>subject_id</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>hadm_id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[hadm_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>hadm_id</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>icustay_id</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[icustay_id]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>icustay_id</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>startdate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[startdate]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>startdate</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>enddate</remote-name>
+            <remote-type>133</remote-type>
+            <local-name>[enddate]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>enddate</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>date</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_type]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_type</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_name_poe</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_name_poe]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_name_poe</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>drug_name_generic</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[drug_name_generic]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>drug_name_generic</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>formulary_drug_cd</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[formulary_drug_cd]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>formulary_drug_cd</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gsn</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[gsn]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>gsn</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>ndc</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[ndc]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>ndc</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>prod_strength</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[prod_strength]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>prod_strength</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dose_val_rx</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dose_val_rx]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>dose_val_rx</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>dose_unit_rx</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[dose_unit_rx]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>dose_unit_rx</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>form_val_disp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[form_val_disp]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>form_val_disp</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>form_unit_disp</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[form_unit_disp]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>form_unit_disp</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>route</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>gender</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[gender]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>gender</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>first_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[first_careunit]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>first_careunit</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>last_careunit</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[last_careunit]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>last_careunit</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>los</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[los]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>los</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>duration_days</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[duration_days]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>duration_days</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_iv</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_iv]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>is_iv</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_formulary</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[is_formulary]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>is_formulary</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>primary_diagnosis</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[primary_diagnosis]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>primary_diagnosis</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>distinct_drugs</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[distinct_drugs]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>distinct_drugs</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>risk_level</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[risk_level]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>risk_level</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>route_category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[route_category]</local-name>
+            <parent-name>[Tableau_Master_Dataset.csv]</parent-name>
+            <remote-alias>route_category</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LEN_RGB' />
+            <object-id>[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Tableau_Master_Dataset.csv' datatype='table' name='[__tableau_internal_object_id__].[Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85]' role='measure' type='quantitative' />
+      <column caption='Distinct Drugs' datatype='integer' name='[distinct_drugs]' role='measure' type='quantitative' />
+      <column caption='Dose Unit Rx' datatype='string' name='[dose_unit_rx]' role='dimension' type='nominal' />
+      <column caption='Dose Val Rx' datatype='string' name='[dose_val_rx]' role='dimension' type='nominal' />
+      <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+      <column caption='Drug Name Generic' datatype='string' name='[drug_name_generic]' role='dimension' type='nominal' />
+      <column caption='Drug Name Poe' datatype='string' name='[drug_name_poe]' role='dimension' type='nominal' />
+      <column caption='Drug Type' datatype='string' name='[drug_type]' role='dimension' type='nominal' />
+      <column caption='Duration Days' datatype='real' name='[duration_days]' role='measure' type='quantitative' />
+      <column caption='Enddate' datatype='date' name='[enddate]' role='dimension' type='ordinal' />
+      <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+      <column caption='Form Unit Disp' datatype='string' name='[form_unit_disp]' role='dimension' type='nominal' />
+      <column caption='Form Val Disp' datatype='string' name='[form_val_disp]' role='dimension' type='nominal' />
+      <column caption='Formulary Drug Cd' datatype='string' name='[formulary_drug_cd]' role='dimension' type='nominal' />
+      <column caption='Gender' datatype='string' name='[gender]' role='dimension' type='nominal' />
+      <column caption='Gsn' datatype='real' name='[gsn]' role='measure' type='quantitative' />
+      <column caption='Hadm Id' datatype='integer' name='[hadm_id]' role='dimension' type='ordinal' />
+      <column caption='Icustay Id' datatype='real' name='[icustay_id]' role='dimension' type='ordinal' />
+      <column caption='Is Formulary' datatype='integer' name='[is_formulary]' role='measure' type='quantitative' />
+      <column caption='Is Iv' datatype='integer' name='[is_iv]' role='measure' type='quantitative' />
+      <column caption='Last Careunit' datatype='string' name='[last_careunit]' role='dimension' type='nominal' />
+      <column caption='Los' datatype='real' name='[los]' role='measure' type='quantitative' />
+      <column caption='Ndc' datatype='real' name='[ndc]' role='measure' type='quantitative' />
+      <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+      <column caption='Prod Strength' datatype='string' name='[prod_strength]' role='dimension' type='nominal' />
+      <column caption='Risk Level' datatype='string' name='[risk_level]' role='dimension' type='nominal' />
+      <column caption='Route' datatype='string' name='[route]' role='dimension' type='nominal' />
+      <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+      <column caption='Row Id' datatype='integer' name='[row_id]' role='dimension' type='ordinal' />
+      <column caption='Startdate' datatype='date' name='[startdate]' role='dimension' type='ordinal' />
+      <column caption='Subject Id' datatype='integer' name='[subject_id]' role='dimension' type='ordinal' />
+      <layout dim-ordering='alphabetic' measure-ordering='alphabetic' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Ireland&quot;' />
+      </semantic-values>
+      <object-graph>
+        <objects>
+          <object caption='Tableau_Master_Dataset.csv' id='Tableau_Master_Dataset.csv_F5A685CBBC824BA5AFB8EABD7F7B9D85'>
+            <properties context=''>
+              <relation connection='textscan.1c7qvx818ckeq213bytw11frb1l6' name='Tableau_Master_Dataset.csv' table='[Tableau_Master_Dataset#csv]' type='table'>
+                <columns character-set='UTF-8' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='row_id' ordinal='0' />
+                  <column datatype='integer' name='subject_id' ordinal='1' />
+                  <column datatype='integer' name='hadm_id' ordinal='2' />
+                  <column datatype='real' name='icustay_id' ordinal='3' />
+                  <column datatype='date' name='startdate' ordinal='4' />
+                  <column datatype='date' name='enddate' ordinal='5' />
+                  <column datatype='string' name='drug_type' ordinal='6' />
+                  <column datatype='string' name='drug' ordinal='7' />
+                  <column datatype='string' name='drug_name_poe' ordinal='8' />
+                  <column datatype='string' name='drug_name_generic' ordinal='9' />
+                  <column datatype='string' name='formulary_drug_cd' ordinal='10' />
+                  <column datatype='real' name='gsn' ordinal='11' />
+                  <column datatype='real' name='ndc' ordinal='12' />
+                  <column datatype='string' name='prod_strength' ordinal='13' />
+                  <column datatype='string' name='dose_val_rx' ordinal='14' />
+                  <column datatype='string' name='dose_unit_rx' ordinal='15' />
+                  <column datatype='string' name='form_val_disp' ordinal='16' />
+                  <column datatype='string' name='form_unit_disp' ordinal='17' />
+                  <column datatype='string' name='route' ordinal='18' />
+                  <column datatype='string' name='gender' ordinal='19' />
+                  <column datatype='string' name='first_careunit' ordinal='20' />
+                  <column datatype='string' name='last_careunit' ordinal='21' />
+                  <column datatype='real' name='los' ordinal='22' />
+                  <column datatype='real' name='duration_days' ordinal='23' />
+                  <column datatype='integer' name='is_iv' ordinal='24' />
+                  <column datatype='integer' name='is_formulary' ordinal='25' />
+                  <column datatype='string' name='primary_diagnosis' ordinal='26' />
+                  <column datatype='integer' name='distinct_drugs' ordinal='27' />
+                  <column datatype='string' name='risk_level' ordinal='28' />
+                  <column datatype='string' name='route_category' ordinal='29' />
+                </columns>
+              </relation>
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name=' Medication Route Share '>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#ffbe7d' fontname='Tableau Semibold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Drug_Summary' name='federated.0xqt4p30j216bg15zlnax025tt56' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xqt4p30j216bg15zlnax025tt56'>
+            <column caption='MIN(0)' datatype='integer' name='[Calculation_1286763245101060]' role='measure' type='quantitative' user:unnamed=' Medication Route Share '>
+              <calculation class='tableau' formula='MIN(0)' />
+            </column>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Calculation_1286763245101060]' derivation='User' name='[usr:Calculation_1286763245101060:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <encoding attr='space' class='1' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' field-type='quantitative' fold='true' scope='rows' type='space' />
+            <format attr='width' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' value='31' />
+            <format attr='display' class='1' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' scope='rows' value='false' />
+            <format attr='display' class='0' field='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' scope='rows' value='false' />
+          </style-rule>
+          <style-rule element='cell'>
+            <format attr='width' value='852' />
+            <format attr='height' value='537' />
+            <format attr='cell-w' value='20' />
+            <format attr='cell-h' value='20' />
+            <format attr='cell' value='20' />
+            <format attr='cell-q' value='100' />
+          </style-rule>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Medium' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='1.9450275897979736' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Pie' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+              <size column='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' />
+              <text column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='wrap' value='off' />
+                <format attr='vertical-align' value='center' />
+                <format attr='text-orientation' value='0' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='size' value='0.75762432813644409' />
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-mode' value='all' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk]' y-index='1'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Circle' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='size' value='0.31784531474113464' />
+                <format attr='mark-color' value='#ffffff' />
+              </style-rule>
+              <style-rule element='pane'>
+                <format attr='minwidth' value='-1' />
+                <format attr='maxwidth' value='-1' />
+                <format attr='minheight' value='-1' />
+                <format attr='maxheight' value='-1' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>([federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk] + [federated.0xqt4p30j216bg15zlnax025tt56].[usr:Calculation_1286763245101060:qk])</rows>
+        <cols />
+      </table>
+      <simple-id uuid='{C36BE705-BCD4-414C-9225-5D96DA9DF9BE}' />
+    </worksheet>
+    <worksheet name='Diagnosis complexity'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#86bcb6' fontname='Tableau Regular' fontsize='20'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Diagnosis_Summary' name='federated.1utj0tk03mq1331ag661k0zwbwhm' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1utj0tk03mq1331ag661k0zwbwhm'>
+            <column caption='Avg Duration' datatype='real' name='[AvgDuration]' role='measure' type='quantitative' />
+            <column caption='Distinct Drugs' datatype='integer' name='[DistinctDrugs]' role='measure' type='quantitative' />
+            <column-instance column='[primary_diagnosis]' derivation='None' name='[none:primary_diagnosis:nk]' pivot='key' type='nominal' />
+            <column caption='Primary Diagnosis' datatype='string' name='[primary_diagnosis]' role='dimension' type='nominal' />
+            <column-instance column='[AvgDuration]' derivation='Sum' name='[sum:AvgDuration:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[DistinctDrugs]' derivation='Sum' name='[sum:DistinctDrugs:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='font-family' value='Tableau Medium' />
+            <format attr='color' value='#000000' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' />
+              <size column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:DistinctDrugs:qk]' />
+              <text column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[none:primary_diagnosis:nk]' />
+              <lod column='[federated.1utj0tk03mq1331ag661k0zwbwhm].[none:primary_diagnosis:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{ABEAE295-E2B6-4F28-8BC5-8D5237666E30}' />
+    </worksheet>
+    <worksheet name='Drug Route Distribution by Care Unit'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#4e79a7' fontname='Tableau Bold' fontsize='18'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_CareUnit_RouteCategory' name='federated.0lkrco81di7t2t1bwneyt050khkj' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0lkrco81di7t2t1bwneyt050khkj'>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column caption='First Careunit' datatype='string' name='[first_careunit]' role='dimension' type='nominal' />
+            <column-instance column='[first_careunit]' derivation='None' name='[none:first_careunit:nk]' pivot='key' type='nominal' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <manual-sort column='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:first_careunit:nk]' direction='ASC'>
+            <dictionary>
+              <bucket>&quot;MICU&quot;</bucket>
+              <bucket>&quot;SICU&quot;</bucket>
+              <bucket>&quot;CCU&quot;</bucket>
+              <bucket>&quot;TSICU&quot;</bucket>
+              <bucket>&quot;CSRU&quot;</bucket>
+              <bucket>%all%</bucket>
+            </dictionary>
+          </manual-sort>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='worksheet'>
+            <format attr='display-field-labels' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0lkrco81di7t2t1bwneyt050khkj].[sum:TotalPrescriptions:qk]</rows>
+        <cols>[federated.0lkrco81di7t2t1bwneyt050khkj].[none:first_careunit:nk]</cols>
+      </table>
+      <simple-id uuid='{538AD62E-3935-4530-A570-601B061A7225}' />
+    </worksheet>
+    <worksheet name='Top 10 Drugs'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#59a14f' fontname='Arial Rounded MT Bold' fontsize='18'> Top 10 Drugs </run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Tableau_Drug_Summary' name='federated.0xqt4p30j216bg15zlnax025tt56' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0xqt4p30j216bg15zlnax025tt56'>
+            <column caption='Total Prescriptions' datatype='integer' name='[TotalPrescriptions]' role='measure' type='quantitative' />
+            <column caption='Drug' datatype='string' name='[drug]' role='dimension' type='nominal' />
+            <column-instance column='[drug]' derivation='None' name='[none:drug:nk]' pivot='key' type='nominal' />
+            <column-instance column='[route_category]' derivation='None' name='[none:route_category:nk]' pivot='key' type='nominal' />
+            <column caption='Route Category' datatype='string' name='[route_category]' role='dimension' type='nominal' />
+            <column-instance column='[TotalPrescriptions]' derivation='Sum' name='[sum:TotalPrescriptions:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]'>
+            <groupfilter count='10' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([TotalPrescriptions])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:drug:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='display' class='0' field='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' scope='cols' value='false' />
+          </style-rule>
+          <style-rule element='header'>
+            <format attr='width' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='168' />
+          </style-rule>
+          <style-rule element='field-labels'>
+            <format attr='font-weight' value='bold' />
+          </style-rule>
+          <style-rule element='field-labels-decoration'>
+            <format attr='font-weight' value='normal' />
+          </style-rule>
+          <style-rule element='field-labels-spanner'>
+            <format attr='font-style' scope='rows' value='italic' />
+            <format attr='color' scope='cols' value='#000000' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='color' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='#000000' />
+            <format attr='font-family' field='[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]' value='Tableau Medium' />
+          </style-rule>
+          <style-rule element='gridline'>
+            <format attr='stroke-size' value='0' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing mark-sizing-setting='marks-scaling-off' />
+            <encodings>
+              <color column='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' />
+              <text column='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' />
+            </encodings>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='size' value='1.3073480129241943' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.0xqt4p30j216bg15zlnax025tt56].[none:drug:nk]</rows>
+        <cols>[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]</cols>
+      </table>
+      <simple-id uuid='{D8CD9F7A-FD16-4D98-A429-53C92B66F96D}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size maxheight='968' maxwidth='1866' minheight='968' minwidth='1866' preset-index='0' sizing-mode='fixed' />
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='84608' id='7' param='horz' type-v2='layout-flow' w='99142' x='429' y='14566'>
+            <zone h='84608' id='5' type-v2='layout-basic' w='99142' x='429' y='14566'>
+              <zone h='39979' id='3' name='Drug Route Distribution by Care Unit' w='51698' x='429' y='14566'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='39979' id='9' name='Top 10 Drugs' w='47444' x='52127' y='14566'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='44629' id='11' name='Diagnosis complexity' w='51714' x='429' y='54545'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='44629' id='13' name=' Medication Route Share ' w='47428' x='52143' y='54545'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone h='13740' id='14' type-v2='empty' w='27641' x='71930' y='826'>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone h='13740' id='15' param='horz' type-v2='layout-flow' w='46746' x='429' y='826'>
+            <zone forceUpdate='true' h='13740' id='16' type-v2='text' w='46746' x='429' y='826'>
+              <formatted-text>
+                <run bold='true' fontcolor='#e15759' fontname='Arial Black' fontsize='22'>BIDMC ICU pharmacy analytics</run>
+                <run>Æ&#10;</run>
+                <run fontname='Arial Narrow' fontsize='16'>MIMIC-III Clinical Database Demo v1.4 · 100 patients · 10,398 prescriptions</run>
+              </formatted-text>
+              <zone-style>
+                <format attr='border-color' value='#4e79a7' />
+                <format attr='border-style' value='solid' />
+                <format attr='border-width' value='1' />
+                <format attr='margin' value='4' />
+              </zone-style>
+            </zone>
+          </zone>
+          <zone h='13740' id='17' type-v2='text' w='12378' x='47175' y='826'>
+            <formatted-text>
+              <run fontalignment='1' fontname='Arial Black' fontsize='18'>IV rate</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#f17b79' fontname='Arial' fontsize='19'>59.5%</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone forceUpdate='true' h='13740' id='18' type-v2='text' w='12377' x='59553' y='826'>
+            <formatted-text>
+              <run fontalignment='1' fontcolor='#1b1b1b' fontname='Bahnschrift' fontsize='11'>High Risk Patients</run>
+              <run fontalignment='1'>Æ&#10;</run>
+              <run fontalignment='1' fontcolor='#e15759' fontname='Arial Black' fontsize='19'>79 / 94</run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+          </zone-style>
+        </zone>
+        <zone h='14256' id='8' name='Drug Route Distribution by Care Unit' pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type-v2='color' w='8414' x='86227' y='620' />
+        <zone h='9091' id='12' name='Diagnosis complexity' pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type-v2='color' w='8403' x='73770' y='2169' />
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='1500' minheight='1500' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='20' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98348' id='19' param='vert' type-v2='layout-flow' w='99142' x='429' y='826'>
+                <zone forceUpdate='true' h='13740' id='16' type-v2='text' w='46746' x='429' y='826'>
+                  <formatted-text>
+                    <run bold='true' fontcolor='#e15759' fontname='Arial Black' fontsize='22'>BIDMC ICU pharmacy analytics</run>
+                    <run>Æ&#10;</run>
+                    <run fontname='Arial Narrow' fontsize='16'>MIMIC-III Clinical Database Demo v1.4 · 100 patients · 10,398 prescriptions</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#4e79a7' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='13740' id='17' type-v2='text' w='12378' x='47175' y='826'>
+                  <formatted-text>
+                    <run fontalignment='1' fontname='Arial Black' fontsize='18'>IV rate</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#f17b79' fontname='Arial' fontsize='19'>59.5%</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone forceUpdate='true' h='13740' id='18' type-v2='text' w='12377' x='59553' y='826'>
+                  <formatted-text>
+                    <run fontalignment='1' fontcolor='#1b1b1b' fontname='Bahnschrift' fontsize='11'>High Risk Patients</run>
+                    <run fontalignment='1'>Æ&#10;</run>
+                    <run fontalignment='1' fontcolor='#e15759' fontname='Arial Black' fontsize='19'>79 / 94</run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39979' id='3' is-fixed='true' name='Drug Route Distribution by Care Unit' w='51698' x='429' y='14566'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='14256' id='8' name='Drug Route Distribution by Care Unit' pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type-v2='color' w='8414' x='86227' y='620'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='39979' id='9' is-fixed='true' name='Top 10 Drugs' w='47444' x='52127' y='14566'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44629' id='11' is-fixed='true' name='Diagnosis complexity' w='51714' x='429' y='54545'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='9091' id='12' name='Diagnosis complexity' pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type-v2='color' w='8403' x='73770' y='2169'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='44629' id='13' is-fixed='true' name=' Medication Route Share ' w='47428' x='52143' y='54545'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{72B2D7EC-59A2-4750-A9AD-994D4A4ABE06}' />
+    </dashboard>
+  </dashboards>
+  <windows saved-dpi-scale-factor='1.25' show-side-pane='false' source-height='141'>
+    <window class='worksheet' maximized='true' name='Drug Route Distribution by Care Unit'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0lkrco81di7t2t1bwneyt050khkj].[none:route_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{8A0812FF-53DF-4D02-BF17-352DEE58C62B}' />
+    </window>
+    <window class='worksheet' name='Top 10 Drugs'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{A6AA05EF-E2E0-4C57-A313-3F67E6FB840C}' />
+    </window>
+    <window class='worksheet' name='Diagnosis complexity'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1utj0tk03mq1331ag661k0zwbwhm].[sum:AvgDuration:qk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <zoom type='entire-view' />
+      </viewpoint>
+      <simple-id uuid='{6BF27F8B-7261-4691-AFA3-381C7F63F9A5}' />
+    </window>
+    <window class='worksheet' name=' Medication Route Share '>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='50'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0xqt4p30j216bg15zlnax025tt56].[none:route_category:nk]' type='color' />
+            <card pane-specification-id='1' param='[federated.0xqt4p30j216bg15zlnax025tt56].[sum:TotalPrescriptions:qk]' type='size' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04C63D0E-F43E-4227-BF49-3FF8C3D89076}' />
+    </window>
+    <window class='dashboard' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name=' Medication Route Share ' />
+        <viewpoint name='Diagnosis complexity'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Drug Route Distribution by Care Unit'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 10 Drugs'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='11' />
+      <simple-id uuid='{9D897DB5-2B8C-4A0C-A73C-F197C6C9FC8C}' />
+    </window>
+  </windows>
+</workbook>

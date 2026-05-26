@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
+  DTS:refId="Package"
+  DTS:CreationDate="4/9/2026 12:18:16 PM"
+  DTS:CreationName="Microsoft.Package"
+  DTS:CreatorComputerName="DOLORES"
+  DTS:CreatorName="DOLORES\abinr"
+  DTS:DTSID="{C14376C0-3C24-4D99-901C-FD9979AE21E1}"
+  DTS:ExecutableType="Microsoft.Package"
+  DTS:LastModifiedProductVersion="17.0.1010.2"
+  DTS:LocaleID="16393"
+  DTS:ObjectName="00_Truncate_DW"
+  DTS:PackageType="5"
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{7F46C686-1307-4B9A-934F-9F0FB5FBEFB5}">
+  <DTS:Property
+    DTS:Name="PackageFormatVersion">8</DTS:Property>
+  <DTS:ConnectionManagers>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DOLORES.Hospital]"
+      DTS:CreationName="ADO.NET:Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5"
+      DTS:DTSID="{8DBB35E1-E557-4D05-811C-EB5C40FC8292}"
+      DTS:ObjectName="DOLORES.Hospital">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DOLORES;Initial Catalog=Hospital;Integrated Security=True;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+    <DTS:ConnectionManager
+      DTS:refId="Package.ConnectionManagers[DOLORES.Pharmacy_DW]"
+      DTS:CreationName="ADO.NET:Microsoft.Data.SqlClient.SqlConnection, Microsoft.Data.SqlClient, Version=5.0.0.0, Culture=neutral, PublicKeyToken=23ec7fc2d6eaa4a5"
+      DTS:DTSID="{3EC865C8-CDF7-47C4-A563-6E6448D3F852}"
+      DTS:ObjectName="DOLORES.Pharmacy_DW">
+      <DTS:ObjectData>
+        <DTS:ConnectionManager
+          DTS:ConnectionString="Data Source=DOLORES;Initial Catalog=Pharmacy_DW;Integrated Security=True;Trust Server Certificate=True;" />
+      </DTS:ObjectData>
+    </DTS:ConnectionManager>
+  </DTS:ConnectionManagers>
+  <DTS:Variables />
+  <DTS:Executables>
+    <DTS:Executable
+      DTS:refId="Package\Insert Unknown Members"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{A7B7378B-4D0D-40D9-85A5-83BB4943BF37}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Insert Unknown Members"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3EC865C8-CDF7-47C4-A563-6E6448D3F852}"
+          SQLTask:SqlStatementSource="SET IDENTITY_INSERT dbo.Dim_Procedure ON;&#xA;INSERT INTO dbo.Dim_Procedure&#xA;    (ProcedureKey,ICD9_Code,ShortTitle,LongTitle,SeqNum,IsPrimary)&#xA;VALUES (-1,'N/A','No Procedure Recorded',&#xA;    'Patient had no associated ICD-9 procedure code',0,0);&#xA;SET IDENTITY_INSERT dbo.Dim_Procedure OFF;&#xA;&#xA;SET IDENTITY_INSERT dbo.Dim_ICUStay ON;&#xA;INSERT INTO dbo.Dim_ICUStay&#xA;    (ICUStayKey,ICUStay_ID,FirstCareUnit,LastCareUnit,DBSource,ICU_LOS_Days)&#xA;VALUES (-1,-1,'No ICU Stay','No ICU Stay','N/A',0);&#xA;SET IDENTITY_INSERT dbo.Dim_ICUStay OFF;&#xA;&#xA;SET IDENTITY_INSERT dbo.Dim_Diagnosis ON;&#xA;INSERT INTO dbo.Dim_Diagnosis&#xA;    (DiagnosisKey,ICD9_Code,ShortTitle,LongTitle,IsPrimary)&#xA;VALUES (-1,'N/A','No Diagnosis Recorded',&#xA;    'Patient had no associated ICD-9 diagnosis code',0);&#xA;SET IDENTITY_INSERT dbo.Dim_Diagnosis OFF;&#xA;&#xA;SET IDENTITY_INSERT dbo.Dim_DRG ON;&#xA;INSERT INTO dbo.Dim_DRG&#xA;    (DRGKey,DRGType,DRGCode,DRGDescription,DRGSeverity,DRGMortality)&#xA;VALUES (-1,'N/A',-1,'No DRG Code Recorded',0,0);&#xA;SET IDENTITY_INSERT dbo.Dim_DRG OFF;&#xA;&#xA;SET IDENTITY_INSERT dbo.Dim_Drug ON;&#xA;INSERT INTO dbo.Dim_Drug&#xA;    (DrugKey,DrugName,DrugNameGeneric,DrugType,&#xA;     FormularyCode,NDC,Route,RouteCategory,DoseUnit,ProdStrength)&#xA;VALUES (-1,'Unknown Drug','Unknown','UNKNOWN',&#xA;    'N/A','N/A','N/A','Other','N/A','N/A');&#xA;SET IDENTITY_INSERT dbo.Dim_Drug OFF;" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+    <DTS:Executable
+      DTS:refId="Package\Truncate DW Tables"
+      DTS:CreationName="Microsoft.ExecuteSQLTask"
+      DTS:Description="Execute SQL Task"
+      DTS:DTSID="{E27BEB5F-7BC0-4DA3-B48B-64723113794E}"
+      DTS:ExecutableType="Microsoft.ExecuteSQLTask"
+      DTS:LocaleID="-1"
+      DTS:ObjectName="Truncate DW Tables"
+      DTS:TaskContact="Execute SQL Task; Microsoft Corporation; SQL Server 2025; © 2025 Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1"
+      DTS:ThreadHint="0">
+      <DTS:Variables />
+      <DTS:ObjectData>
+        <SQLTask:SqlTaskData
+          SQLTask:Connection="{3EC865C8-CDF7-47C4-A563-6E6448D3F852}"
+          SQLTask:SqlStatementSource="-- Step 1: Drop all FK constraints&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_Date;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_Patient;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_Drug;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_ICUStay;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_Procedure;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_Diagnosis;&#xA;ALTER TABLE dbo.Fact_Prescription DROP CONSTRAINT FK_Fact_DRG;&#xA;&#xA;-- Step 2: Truncate everything&#xA;TRUNCATE TABLE dbo.Fact_Prescription;&#xA;TRUNCATE TABLE dbo.Dim_Date;&#xA;TRUNCATE TABLE dbo.Dim_Patient;&#xA;TRUNCATE TABLE dbo.Dim_Drug;&#xA;TRUNCATE TABLE dbo.Dim_ICUStay;&#xA;TRUNCATE TABLE dbo.Dim_Procedure;&#xA;TRUNCATE TABLE dbo.Dim_Diagnosis;&#xA;TRUNCATE TABLE dbo.Dim_DRG;&#xA;&#xA;-- Step 3: Recreate all FK constraints&#xA;ALTER TABLE dbo.Fact_Prescription ADD&#xA;    CONSTRAINT FK_Fact_Date&#xA;        FOREIGN KEY (DateKey) REFERENCES dbo.Dim_Date(DateKey),&#xA;    CONSTRAINT FK_Fact_Patient&#xA;        FOREIGN KEY (PatientKey) REFERENCES dbo.Dim_Patient(PatientKey),&#xA;    CONSTRAINT FK_Fact_Drug&#xA;        FOREIGN KEY (DrugKey) REFERENCES dbo.Dim_Drug(DrugKey),&#xA;    CONSTRAINT FK_Fact_ICUStay&#xA;        FOREIGN KEY (ICUStayKey) REFERENCES dbo.Dim_ICUStay(ICUStayKey),&#xA;    CONSTRAINT FK_Fact_Procedure&#xA;        FOREIGN KEY (ProcedureKey) REFERENCES dbo.Dim_Procedure(ProcedureKey),&#xA;    CONSTRAINT FK_Fact_Diagnosis&#xA;        FOREIGN KEY (DiagnosisKey) REFERENCES dbo.Dim_Diagnosis(DiagnosisKey),&#xA;    CONSTRAINT FK_Fact_DRG&#xA;        FOREIGN KEY (DRGKey) REFERENCES dbo.Dim_DRG(DRGKey);" xmlns:SQLTask="www.microsoft.com/sqlserver/dts/tasks/sqltask" />
+      </DTS:ObjectData>
+    </DTS:Executable>
+  </DTS:Executables>
+  <DTS:PrecedenceConstraints>
+    <DTS:PrecedenceConstraint
+      DTS:refId="Package.PrecedenceConstraints[Constraint]"
+      DTS:CreationName=""
+      DTS:DTSID="{E85DD1FD-CC01-4D32-A5AC-229BA49C41D1}"
+      DTS:From="Package\Truncate DW Tables"
+      DTS:LogicalAnd="True"
+      DTS:ObjectName="Constraint"
+      DTS:To="Package\Insert Unknown Members" />
+  </DTS:PrecedenceConstraints>
+  <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
+<!--This CDATA section contains the layout information of the package. The section includes information such as (x,y) coordinates, width, and height.-->
+<!--If you manually edit this section and make a mistake, you can delete it. -->
+<!--The package will still be able to load normally but the previous layout information will be lost and the designer will automatically re-arrange the elements on the design surface.-->
+<Objects
+  Version="8">
+  <!--Each node below will contain properties that do not affect runtime behavior.-->
+  <Package
+    design-time-name="Package">
+    <LayoutInfo>
+      <GraphLayout
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        <NodeLayout
+          Size="196.8,41.6"
+          Id="Package\Insert Unknown Members"
+          TopLeft="223.333321130939,175.933332109915" />
+        <NodeLayout
+          Size="173.6,41.6"
+          Id="Package\Truncate DW Tables"
+          TopLeft="217.499988116324,86.6666660639975" />
+        <EdgeLayout
+          Id="Package.PrecedenceConstraints[Constraint]"
+          TopLeft="304.299988116324,128.266666063997">
+          <EdgeLayout.Curve>
+            <mssgle:Curve
+              StartConnector="{assembly:Null}"
+              EndConnector="17.4333330146142,47.6666660459174"
+              Start="0,0"
+              End="17.4333330146142,40.1666660459174">
+              <mssgle:Curve.Segments>
+                <mssgle:SegmentCollection
+                  Capacity="5">
+                  <mssgle:LineSegment
+                    End="0,19.8333330229587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="0,19.8333330229587"
+                    Point2="0,23.8333330229587"
+                    Point3="4,23.8333330229587" />
+                  <mssgle:LineSegment
+                    End="13.4333330146142,23.8333330229587" />
+                  <mssgle:CubicBezierSegment
+                    Point1="13.4333330146142,23.8333330229587"
+                    Point2="17.4333330146142,23.8333330229587"
+                    Point3="17.4333330146142,27.8333330229587" />
+                  <mssgle:LineSegment
+                    End="17.4333330146142,40.1666660459174" />
+                </mssgle:SegmentCollection>
+              </mssgle:Curve.Segments>
+            </mssgle:Curve>
+          </EdgeLayout.Curve>
+          <EdgeLayout.Labels>
+            <EdgeLabelCollection />
+          </EdgeLayout.Labels>
+        </EdgeLayout>
+      </GraphLayout>
+    </LayoutInfo>
+  </Package>
+</Objects>]]></DTS:DesignTimeProperties>
+</DTS:Executable>

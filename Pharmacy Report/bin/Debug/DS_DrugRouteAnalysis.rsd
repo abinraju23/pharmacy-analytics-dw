@@ -1,0 +1,64 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<SharedDataSet xmlns="http://schemas.microsoft.com/sqlserver/reporting/2010/01/shareddatasetdefinition" xmlns:rd="http://schemas.microsoft.com/SQLServer/reporting/reportdesigner">
+  <DataSet Name="DataSet1">
+    <Query>
+      <DataSourceReference>Pharmacy_DW</DataSourceReference>
+      <DataSetParameters>
+        <DataSetParameter Name="@CareUnit">
+          <ReadOnly>false</ReadOnly>
+          <Nullable>false</Nullable>
+          <OmitFromQuery>false</OmitFromQuery>
+          <rd:DbType>Object</rd:DbType>
+        </DataSetParameter>
+      </DataSetParameters>
+      <CommandText>SELECT TOP 15
+    d.RouteCategory,
+    d.Route,
+    i.FirstCareUnit,
+    COUNT(f.FactKey)                AS TotalPrescriptions,
+    COUNT(DISTINCT f.PatientKey)    AS UniquePatients,
+    AVG(f.DurationDays)             AS AvgDurationDays,
+    SUM(CASE WHEN f.IsIVRoute = 1
+             THEN 1 ELSE 0 END)     AS IVCount,
+    CAST(
+        SUM(CASE WHEN f.IsIVRoute = 1
+                 THEN 1 ELSE 0 END) * 100.0
+        / COUNT(f.FactKey)
+    AS DECIMAL(5,2))                AS IVPercentage
+FROM dbo.Fact_Prescription f
+JOIN dbo.Dim_Drug d     ON f.DrugKey    = d.DrugKey
+JOIN dbo.Dim_ICUStay i  ON f.ICUStayKey = i.ICUStayKey
+WHERE i.FirstCareUnit != 'No ICU Stay'
+AND (i.FirstCareUnit = @CareUnit OR @CareUnit = 'All')
+GROUP BY d.RouteCategory, d.Route, i.FirstCareUnit
+ORDER BY TotalPrescriptions DESC</CommandText>
+    </Query>
+    <Fields>
+      <Field Name="RouteCategory">
+        <DataField>RouteCategory</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="Route">
+        <DataField>Route</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="FirstCareUnit">
+        <DataField>FirstCareUnit</DataField>
+        <rd:TypeName>System.String</rd:TypeName>
+      </Field>
+      <Field Name="TotalPrescriptions">
+        <DataField>TotalPrescriptions</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="UniquePatients">
+        <DataField>UniquePatients</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+      <Field Name="IVCount">
+        <DataField>IVCount</DataField>
+        <rd:TypeName>System.Int32</rd:TypeName>
+      </Field>
+    </Fields>
+    <InterpretSubtotalsAsDetails>True</InterpretSubtotalsAsDetails>
+  </DataSet>
+</SharedDataSet>
